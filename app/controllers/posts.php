@@ -72,7 +72,7 @@ if (isset($_POST['save-post'])) {
 
 if (isset($_POST['update-post'])) {
   // to avoid same name check for title while update we catenate a space to title  
-  $_POST['title'] =$_POST['title'] . '-'; 
+  // $_POST['title'] =$_POST['title'] . '-'; 
   $errors = validatePost($_POST);
 
   if (!empty($_FILES['image'])) {

@@ -44,27 +44,23 @@
 
         <table>
           <thead>
-            <th>N</th>
+            <th>SN</th>
             <th>Username</th>
+            <th>Email</th>
             <th colspan="3">Action</th>
           </thead>
           <tbody>
-            <tr class="rec">
-              <td>1</td>
-              <td>
-                <a href="#">Awa Melvine</a>
-              </td>
-              <td>
-                <a href="edit.php" class="edit">
-                  Edit
-                </a>
-              </td>
-              <td>
-                <a href="#" class="delete">
-                  Delete
-                </a>
-              </td>
-            </tr>
+
+            <?php foreach ($admin_users as $key => $user) : ?>
+              <tr class="rec">
+                <td><?php echo $key+1 ?></td>
+                <td><a href="#"><?php echo $user['username'] ?></a></td>
+                <td><a href="#"><?php echo $user['email'] ?></a></td>
+                <td><a href="edit.php?id=<?php echo $user['id'] ?>" class="edit">Edit</a></td>
+                <td><a href="index.php?delete_id=<?php echo $user['id'] ?>" class="delete">Delete</a></td>
+              </tr>
+            <?php endforeach; ?>
+
           </tbody>
         </table>
 

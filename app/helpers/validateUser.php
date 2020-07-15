@@ -14,9 +14,13 @@ function validateUser($user){
   if (!empty($user['password']) &&  !empty($user['passwordConf']) && ($user['password']) !== ($user['passwordConf'])) {
     array_push($errors, "Password Mismatch");
   }
-  $existingUser = selectOne('users',['email'=>$user['email']]);
-  if($existingUser){ 
+  $existingEmail = selectOne('users',['email'=>$user['email']]);
+  if($existingEmail){ 
     array_push($errors , "User with this Email already Exist!!");
+  }
+  $existingUser = selectOne('users',['username'=>$user['username']]);
+  if($existingUser){ 
+    array_push($errors , "User with this Username already Exist!!");
   }
   return $errors;
 }
