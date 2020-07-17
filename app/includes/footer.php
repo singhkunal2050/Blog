@@ -1,7 +1,7 @@
 <div class="footer">
     <div class="footer-content">
       <div class="footer-section about">
-        <h1 class="logo-text">Awa<span>Inspires</span></h1>
+        <h1 class="logo-text">SSGR<span> Solutions </span></h1>
         <p>
         Industry Academia Connect Program
 Empowering Workforce of the Future

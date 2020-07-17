@@ -13,6 +13,7 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png"/>
 
   <title>SSGR Solutions | Register</title>
 </head>

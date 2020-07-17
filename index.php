@@ -15,8 +15,7 @@ include(ROOT_PATH . '/app/controllers/topics.php');
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" type="image/png" href="/assets/images/"/>
-
+  <link rel="icon" type="image/png" href="assets/images/logo.png"/>
 
   <title>SSGR Solutions</title>
 </head>
