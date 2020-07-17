@@ -3,9 +3,8 @@
       <div class="footer-section about">
         <h1 class="logo-text">Awa<span>Inspires</span></h1>
         <p>
-          AwaInspires is a fictional blog conceived for the purpose
-          of a tutorial on YouTube. However, Awa has a blog called pieceofadvice.org
-          where he writes truly inspiring stuff.
+        Industry Academia Connect Program
+Empowering Workforce of the Future
         </p>
         <!-- <br> -->
 
