@@ -13,7 +13,7 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <title>Motivational Blog</title>
+  <title>SSGR Solutions | Post </title>
 </head>
 
 <body>

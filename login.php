@@ -15,7 +15,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <title>Login</title>
+  <title>SSGR Solutions | Login</title>
 </head>
 
 <body>

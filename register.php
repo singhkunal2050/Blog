@@ -14,7 +14,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <title>Register</title>
+  <title>SSGR Solutions | Register</title>
 </head>
 
 <body>

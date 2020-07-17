@@ -16,7 +16,7 @@ include(ROOT_PATH . '/app/controllers/topics.php');
   <!-- Custom Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <title>Awa Inspires Blog</title>
+  <title>SSGR Solutions</title>
 </head>
 
 <body>
