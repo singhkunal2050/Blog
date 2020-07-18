@@ -37,8 +37,8 @@
         <a href="create.php" class="btn btn-sm">Add User</a>
         <a href="index.php" class="btn btn-sm">Manage Users</a>
       </div>
-      <div class="">
-        <h2 style="text-align: center;">Manage Users</h2>
+     <div class="">
+        <h2 style="text-align: center;">Manage Admins</h2>
 
         <?php include(ROOT_PATH . '/app/includes/messages.php'); ?>
 
@@ -60,7 +60,33 @@
                 <td><a href="index.php?delete_id=<?php echo $user['id'] ?>" class="delete">Delete</a></td>
               </tr>
             <?php endforeach; ?>
+          </tbody>
+        </table>
 
+      </div>
+      <div class="">
+        <h2 style="text-align: center;">Manage Users</h2>
+
+        <?php include(ROOT_PATH . '/app/includes/messages.php'); ?>
+
+        <table>
+          <thead>
+            <th>SN</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th colspan="3">Action</th>
+          </thead>
+          <tbody>
+
+            <?php foreach ($normal_users as $key => $user) : ?>
+              <tr class="rec">
+                <td><?php echo $key+1 ?></td>
+                <td><a href="#"><?php echo $user['username'] ?></a></td>
+                <td><a href="#"><?php echo $user['email'] ?></a></td>
+                <td><a href="edit.php?id=<?php echo $user['id'] ?>" class="edit">Edit</a></td>
+                <td><a href="index.php?delete_id=<?php echo $user['id'] ?>" class="delete">Delete</a></td>
+              </tr>
+            <?php endforeach; ?>
           </tbody>
         </table>
 
@@ -78,7 +104,7 @@
   <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
 
   <!-- Custome Scripts -->
-  <script src="../../assets/js/scripts.js"></script>
+  <script src="../../assets/js/script.js"></script>
 
 </body>
 

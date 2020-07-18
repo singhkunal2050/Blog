@@ -96,7 +96,7 @@
   <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
 
   <!-- Custome Scripts -->
-  <script src="../../assets/js/scripts.js"></script>
+  <script src="../../assets/js/script.js"></script>
 
 </body>
 

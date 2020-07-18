@@ -6,6 +6,8 @@ require(ROOT_PATH . '/app/helpers/validateUser.php');
 
 $table = 'users';
 $admin_users = selectAll($table, ['admin' => 1]);            // get all admin users 
+$normal_users = selectAll($table, ['admin' => 0]);            // get all admin users 
+
 $username = '';
 $id = '';
 $admin = '';
