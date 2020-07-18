@@ -8,7 +8,7 @@ html, body {
   background: #f6f6f6;
 }
 
-a {
+a { 
   text-decoration: none;
   color: inherit;
 }
@@ -23,6 +23,12 @@ a:hover, a:active {
   color: #5c5b5b;
   font-weight: normal;
 }
+
+/* ksr added hamburger for super slim phone resoltions */
+/* .logo-text{
+  font-size: 1.5rem;
+  margin-top: 15px;
+}s */
 
 .clearfix::after {
   content: '';
@@ -554,27 +560,34 @@ header nav ul .userinfo i.fa-chevron-down {
 }
 
 /* ksr added about illus */
+
 /* 
-.about-logo-container{
-  height: 200px;
-  width: 200px;
-  border: 2px solid black;
+.about-container{
   display: flex;
-  justify-content: center;
-  align-content: center;
-} */
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items:center;
+}
+
+.about-child{
+  box-shadow: rgba(137, 43, 226, 0.685)  5px 5px 35px;
+  padding: 80px 40px;
+  margin: 20px 20px;
+}
+
 
 .about-logo{
   background-image: url('../images/about.png');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 300px;
-  /* border: blue 2px solid; */
-  margin: 10px 20px;
-  
-  }
+  height:300px;
+  width: 470px;
+}
 
-
+.info{
+  margin-bottom: 80px;
+}
+ */
 
 @media (max-width: 768px) {
   .menu-toggle {
@@ -683,6 +696,14 @@ header nav ul .userinfo i.fa-chevron-down {
 }
 
 @media only screen and (max-width: 560px) {
+
+  /* ksr added hamburger for super slim phone resoltions */
+  /* .logo-text{
+    font-size: 1.6rem;
+    margin-top: 13px;
+  } */
+
+
   .footer {
     padding: 20px;
     padding-bottom: 60px;

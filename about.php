@@ -26,15 +26,17 @@
   <!-- header -->
   <?php include(ROOT_PATH . '/app/includes/header.php'); ?>
   <!-- // header -->
-  <!-- <div class="about-logo-container"> -->
-    <div class="auth-content about-logo">
+  <div class="about-container">
+    <div class="about-child">
+      <div class="about-logo">
+      </div>
     </div>
-  <!-- </div> -->
-
-  <div class="auth-content about">
-    Project Framework Transformation’ based on Industry Inputs to make it more relevant in line with the Industry Expectations
-    Objective is to make Students Project Framework more responsive and help students to be Industry Ready, Future Ready.
+    <div class="about-child info">
+      Project Framework Transformation’ based on Industry Inputs to make it more relevant in line with the Industry Expectations
+      Objective is to make Students Project Framework more responsive and help students to be Industry Ready, Future Ready.
+    </div>
   </div>
+
 
 
   <!-- FOOTER -->
