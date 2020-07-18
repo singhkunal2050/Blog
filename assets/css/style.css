@@ -553,6 +553,29 @@ header nav ul .userinfo i.fa-chevron-down {
   font-family: 'Lora', serif;
 }
 
+/* ksr added about illus */
+/* 
+.about-logo-container{
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+} */
+
+.about-logo{
+  background-image: url('../images/about.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 300px;
+  /* border: blue 2px solid; */
+  margin: 10px 20px;
+  
+  }
+
+
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
