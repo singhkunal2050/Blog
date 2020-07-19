@@ -1,5 +1,4 @@
 <?php include('path.php'); ?>
-<?php include(ROOT_PATH . '/app/controllers/users.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,8 +28,8 @@
   <div class="about-container">
     <div class="about-child">
       <div class="about-logo">
+      <img src="assets/images/image_3.png" class="post-image" alt="">
       </div>
-      <img src="" alt="">
     </div>
     <div class="about-child info">
       Project Framework Transformation’ based on Industry Inputs to make it more relevant in line with the Industry Expectations
