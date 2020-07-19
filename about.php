@@ -30,6 +30,7 @@
     <div class="about-child">
       <div class="about-logo">
       </div>
+      <img src="" alt="">
     </div>
     <div class="about-child info">
       Project Framework Transformation’ based on Industry Inputs to make it more relevant in line with the Industry Expectations
