@@ -49,7 +49,7 @@ if (isset($_POST['save-post'])) {
 
   if (count($errors) === 0) {
     unset($_POST['save-post']);
-    $_POST['user_id'] = 1; //$_SESSION['user_id'];
+    $_POST['user_id'] = $_SESSION['id'];
     $_POST['published'] = isset($_POST['publish']) ? 1 : 0;
     unset($_POST['publish']);
     // dd($_POST);
@@ -90,7 +90,7 @@ if (isset($_POST['update-post'])) {
   if (count($errors) === 0) {
     $id = $_POST['id'];
     unset($_POST['update-post'] ,$_POST['id'] );
-    $_POST['user_id'] = 1; //$_SESSION['user_id'];
+    $_POST['user_id'] = $_SESSION['id']; 
     $_POST['published'] = isset($_POST['publish']) ? 1 : 0;
     unset($_POST['publish']);
     // dd($_POST);
