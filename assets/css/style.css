@@ -580,8 +580,8 @@ header nav ul .userinfo i.fa-chevron-down {
 .about-logo{
   background-size: cover;
   background-repeat: no-repeat;
-  height:300px;
-  width: 470px;
+  max-height:300px;
+  max-width: 470px;
 }
 
 .info{
