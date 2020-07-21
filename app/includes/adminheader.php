@@ -8,17 +8,19 @@
    <nav>
      <ul>
        <li><a href="#">Home</a></li>
+       <?php if(isset($_SESSION['username'])) : ?>
        <li>
          <a href="#" class="userinfo">
            <i class="fa fa-user"></i>
-           Awa Melvine
+           <?php echo($_SESSION['username']); ?>
            <i class="fa fa-chevron-down"></i>
          </a>
          <ul class="dropdown">
            <li><a href="#">Dashboard</a></li>
-           <li><a href="#" class="logout">logout</a></li>
+           <li><a href="<?php echo BASE_URL . '/logout.php'; ?>" class="logout">logout</a></li>
          </ul>
        </li>
+       <?php endif ; ?>
      </ul>
    </nav>
  </header>
