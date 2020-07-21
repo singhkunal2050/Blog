@@ -19,8 +19,13 @@ function validateUser($user){
     array_push($errors , "User with this Email already Exist!!");
   }
   $existingUser = selectOne('users',['username'=>$user['username']]);
-  if($existingUser){ 
-    array_push($errors , "User with this Username already Exist!!");
+  if ($existingUser) {
+    if (isset($user['update-user']) && $existingUser['id'] != $user['id']) {
+      array_push($errors, "User already Exist!!");
+    }
+    if (isset($topic['create-admin'])) {
+      array_push($errors, "USer already Exist!!");
+    }
   }
   return $errors;
 }
@@ -35,7 +40,3 @@ function validateLogin($user){
   }
   return $errors;
 }
-
-
-
-?>
