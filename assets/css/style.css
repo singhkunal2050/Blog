@@ -561,23 +561,23 @@ header nav ul .userinfo i.fa-chevron-down {
 
 /* ksr added about illus */
 
-/* 
 .about-container{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items:center;
 }
 
+
 .about-child{
   box-shadow: rgba(137, 43, 226, 0.685)  5px 5px 35px;
-  padding: 80px 40px;
+  padding: 40px 20px;
   margin: 20px 20px;
 }
 
 
+
 .about-logo{
-  background-image: url('../images/about.png');
   background-size: cover;
   background-repeat: no-repeat;
   height:300px;
@@ -587,7 +587,7 @@ header nav ul .userinfo i.fa-chevron-down {
 .info{
   margin-bottom: 80px;
 }
- */
+
 
 @media (max-width: 768px) {
   .menu-toggle {

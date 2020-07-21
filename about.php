@@ -27,9 +27,7 @@
   <!-- // header -->
   <div class="about-container">
     <div class="about-child">
-      <div class="about-logo">
-      <img src="assets/images/image_3.png" class="post-image" alt="">
-      </div>
+      <img src="assets/images/about.png" class="about-logo" alt="">
     </div>
     <div class="about-child info">
       Project Framework Transformation’ based on Industry Inputs to make it more relevant in line with the Industry Expectations
