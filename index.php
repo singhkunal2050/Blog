@@ -1,6 +1,8 @@
 <?php
 include('path.php');
 include(ROOT_PATH . '/app/controllers/topics.php');
+$posts = selectAll('posts', ['published' => 1]);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +17,7 @@ include(ROOT_PATH . '/app/controllers/topics.php');
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" type="image/png" href="assets/images/logo.png"/>
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
 
   <title>SSGR Solutions</title>
 </head>
@@ -38,58 +40,25 @@ include(ROOT_PATH . '/app/controllers/topics.php');
       <i class="fa fa-chevron-left prev"></i>
 
       <div class="posts-wrapper">
-        <div class="post">
-          <div class="inner-post">
-            <img src="assets/images/image_7.png" alt="" style="height: 200px; width: 100%; border-top-left-radius: 5px; border-top-right-radius: 5px;">
-            <div class="post-info">
-              <h4><a href="single.php">One day your life will flash before your eyes</a></h3>
-                <div>
-                  <i class="fa fa-user-o"></i> Awa Melvine
-                  &nbsp;
-                  <i class="fa fa-calendar"></i> Jan 18, 2019
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="post">
-          <div class="inner-post">
-            <img src="assets/images/image_6.png" alt="" style="height: 200px; width: 100%; border-top-left-radius: 5px; border-top-right-radius: 5px;">
-            <div class="post-info">
-              <h4><a href="single.php">One day your life will flash before your eyes</a></h3>
-                <div>
-                  <i class="fa fa-user-o"></i> Awa Melvine
-                  &nbsp;
-                  <i class="fa fa-calendar"></i> Jan 18, 2019
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="post">
-          <div class="inner-post">
-            <img src="assets/images/image_5.png" alt="" style="height: 200px; width: 100%; border-top-left-radius: 5px; border-top-right-radius: 5px;">
-            <div class="post-info">
-              <h4><a href="single.php">One day your life will flash before your eyes</a></h3>
-                <div>
-                  <i class="fa fa-user-o"></i> Awa Melvine
-                  &nbsp;
-                  <i class="fa fa-calendar"></i> Jan 18, 2019
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="post">
-          <div class="inner-post">
-            <img src="assets/images/image_4.png" alt="" style="height: 200px; width: 100%; border-top-left-radius: 5px; border-top-right-radius: 5px;">
-            <div class="post-info">
-              <h4><a href="single.php">One day your life will flash before your eyes</a></h4>
-              <div>
-                <i class="fa fa-user-o"></i> Awa Melvine
-                &nbsp;
-                <i class="fa fa-calendar"></i> Jan 18, 2019
+
+        <?php foreach ($posts as $post) : ?>
+
+          <div class="post">
+            <div class="inner-post">
+              <img src="<?php echo BASE_URL . '/assets/images/' . $post['image']; ?>" alt="" style="height: 200px; width: 100%; border-top-left-radius: 5px; border-top-right-radius: 5px;">
+              <div class="post-info">
+                <h4><a href="single.php"><?php echo $post['title']; ?></a></h3>
+                  <div>
+                    <i class="fa fa-user-o"></i> Awa Melvine
+                    &nbsp;
+                    <i class="fa fa-calendar"></i> <?php echo  date('F j, Y', strtotime($post['created_at'])); ?>
+                  </div>
               </div>
             </div>
           </div>
-        </div>
+
+        <?php endforeach; ?>
+
       </div>
     </div>
     <!-- // Posts Slider -->
@@ -98,53 +67,28 @@ include(ROOT_PATH . '/app/controllers/topics.php');
     <div class="content clearfix">
       <div class="page-content">
         <h1 class="recent-posts-title">Recent Posts</h1>
-        <div class="post clearfix">
-          <img src="assets/images/image_1.png" class="post-image" alt="">
-          <div class="post-content">
 
-            <h2 class="post-title"><a href="#">The strongest and sweetest songs yet remain to be sung</a></h2>
+        <?php foreach ($posts as $post) : ?>
 
-            <div class="post-info">
-              <i class="fa fa-user-o"></i> Awa Melvine
-              &nbsp;
-              <i class="fa fa-calendar"></i> Jan 18, 2019
+          <div class="post clearfix">
+            <img src="<?php echo BASE_URL . '/assets/images/' . $post['image']; ?>" class="post-image" alt="">
+            <div class="post-content">
+
+              <h2 class="post-title"><a href="#"> <?php echo $post['title']; ?></a></h2>
+
+              <div class="post-info">
+                <i class="fa fa-user-o"></i> Awa Melvine
+                &nbsp;
+                <i class="fa fa-calendar"></i> <?php echo  date('F j, Y', strtotime($post['created_at'])); ?>
+              </div>
+              <p class="post-body"><?php echo substr($post['body'],0,150) , '...' ?>
+              </p>
+              <a href="#" class="read-more">Read More</a>
             </div>
-            <p class="post-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus expedita tempora
-              qui sunt! Ipsum nihil unde obcaecati.
-            </p>
-            <a href="#" class="read-more">Read More</a>
           </div>
-        </div>
-        <div class="post clearfix">
-          <img src="assets/images/image_2.png" class="post-image" alt="">
-          <div class="post-content">
-            <h2 class="post-title"><a href="#">That love is all there is, is all we know of love</h2></a>
-            <div class="post-info">
-              <i class="fa fa-user-o"></i> Awa Melvine
-              &nbsp;
-              <i class="fa fa-calendar"></i> Jan 18, 2019
-            </div>
-            <p class="post-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus expedita tempora
-              qui sunt! Ipsum nihil unde obcaecati.
-            </p>
-            <a href="#" class="read-more">Read More</a>
-          </div>
-        </div>
-        <div class="post clearfix">
-          <img src="assets/images/image_3.png" class="post-image" alt="">
-          <div class="post-content">
-            <h2 class="post-title"><a href="#">Do anything, but let it produce joy</a></h2>
-            <div class="post-info">
-              <i class="fa fa-user-o"></i> Awa Melvine
-              &nbsp;
-              <i class="fa fa-calendar"></i> Jan 18, 2019
-            </div>
-            <p class="post-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus expedita tempora
-              qui sunt! Ipsum nihil unde obcaecati.
-            </p>
-            <a href="#" class="read-more">Read More</a>
-          </div>
-        </div>
+
+        <?php endforeach; ?>
+
       </div>
       <div class="sidebar">
         <!-- Search -->
